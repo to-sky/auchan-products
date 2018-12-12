@@ -1,0 +1,1 @@
+# Auchan shop parser
