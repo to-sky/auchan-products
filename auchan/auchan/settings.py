@@ -14,6 +14,15 @@ BOT_NAME = 'auchan'
 SPIDER_MODULES = ['auchan.spiders']
 NEWSPIDER_MODULE = 'auchan.spiders'
 
+CONNECTION_STRING = "{driver}://{user}:{passwd}@{host}:{port}/{db_name}?charset=utf8".format(
+    driver="mysql",
+    user="homestead",
+    passwd="secret",
+    host="192.168.10.10",
+    port="3306",
+    db_name="bh"
+)
+
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'auchan (+http://www.yourdomain.com)'
@@ -64,9 +73,9 @@ ROBOTSTXT_OBEY = True
 
 # Configure item pipelines
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
-#ITEM_PIPELINES = {
-#    'auchan.pipelines.AuchanPipeline': 300,
-#}
+ITEM_PIPELINES = {
+   'auchan.pipelines.AuchanPipeline': 300,
+}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://doc.scrapy.org/en/latest/topics/autothrottle.html

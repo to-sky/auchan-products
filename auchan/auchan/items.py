@@ -9,6 +9,11 @@ import scrapy
 
 
 class AuchanItem(scrapy.Item):
-    # define the fields for your item here like:
-    # name = scrapy.Field()
+    name = scrapy.Field()
+    description = scrapy.Field()
+    image_url = scrapy.Field()
+    price = scrapy.Field()
+    attributes = scrapy.Field()
+    sku = scrapy.Field()
+    categories = scrapy.Field()
     pass
